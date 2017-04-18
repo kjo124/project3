@@ -72,4 +72,7 @@ URL to your website as a comment during the submission.
 - [ ] users.php
 - [ ] ingredient.php
 
-- [ ] needs to be done - [x] done
+* * *
+
+- [ ] needs to be done
+- [x] done
