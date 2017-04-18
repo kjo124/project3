@@ -74,5 +74,5 @@ URL to your website as a comment during the submission.
 
 * * *
 
-- [ ] needs to be done
+- [ ] TODO:
 - [x] done
