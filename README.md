@@ -80,21 +80,19 @@ URL to your website as a comment during the submission.
 * * *
 
 #### Availability: ####
-<dl>
-  <dt>Kyle:</dt>
-    <dd>Monday: 12:30 - 2:00 pm </dd>
-    <dd>Wednesday: 2:00 - 3:00 pm & 4:00 - 5:00 pm </dd>
-    <dd>Thursday: 2:00 - 5:00 pm </dd>
-    <dd>Friday: 12:30 - 2:00 pm </dd>
-    <dd><s>Saturday: </s> </dd>
-    <dd>Sunday: Not on campus but available </dd>
-</dl>
+**Kyle:**
++ Monday: 12:30 - 2:00 pm
++ Wednesday: 2:00 - 3:00 pm & 4:00 - 5:00 pm
++ Thursday: 2:00 - 5:00 pm
++ Friday: 12:30 - 2:00 pm
++ <s>Saturday: </s>
++ Sunday: Not on campus but available
 
 **Derek:**
-<dd>Monday:
-<dd>Tuesday:
-<dd>Wednesday:
-<dd>Thursday:
-<dd>Friday:
-<dd>Saturday:
-<dd>Sunday:
++ Monday:
++ Tuesday:
++ Wednesday:
++ Thursday:
++ Friday:
++ Saturday:
++ Sunday: 
