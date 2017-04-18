@@ -95,4 +95,4 @@ URL to your website as a comment during the submission.
 + Thursday:
 + Friday:
 + Saturday:
-+ Sunday: **
++ Sunday: 
