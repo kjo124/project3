@@ -76,3 +76,24 @@ URL to your website as a comment during the submission.
 
 - [ ] TODO:
 - [x] done
+
+* * *
+
+#### Availability: ####
+**Kyle:**
+Monday: 12:30 - 2:00 pm
+Tuesday: 2:00 - 5:00 pm
+Wednesday: 2:00 - 3:00 pm & 4:00 - 5:00 pm
+Thursday: 2:00 - 5:00 pm
+Friday: 12:30 - 2:00 pm
+<s>Saturday: </s>
+Sunday: Not on campus but available
+
+**Derek:**
+Monday:
+Tuesday:
+Wednesday:
+Thursday:
+Friday:
+Saturday:
+Sunday: **
