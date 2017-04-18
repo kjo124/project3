@@ -45,7 +45,6 @@ URL to your website as a comment during the submission.
 - [ ] ajax_ingrimage.php
 - [ ] ajax_listing.php
 - [ ] ajax_status.php
-- [ ] fedr_status.php
 ### Pages: ###
 - [ ] ingredients_display.php
 - [ ] index.php
@@ -56,6 +55,7 @@ URL to your website as a comment during the submission.
 - [ ] logout.php
 - [ ] reset.php
 - [ ] add_ingredient.php
+- [ ] fedr_status.php
 ### Includes: ###
 - [ ] authentication.php
 - [ ] commenting.php
