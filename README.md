@@ -11,7 +11,7 @@ Keep in mind the base URL is going to be associated with one of your CS
 Department accounts and websites. You can, and are encouraged, to place
 project3 in a subfolder of your public_html root.
 
-- [ ] email this:  [{"team":"1","nameShort":"TODO","nameLong":"TODO","baseURL":"http:\/\/www.cs.colostate.edu\/~kjo124\/project3\/"}]
+- [x] email this:  [{"team":"1","nameShort":"DKingredients","nameLong":"Derek & Kyle Ingredients","baseURL":"http:\/\/www.cs.colostate.edu\/~kjo124\/project3\/"}]
 
 Thursday April 20th by Midnight
 ---
@@ -95,4 +95,4 @@ URL to your website as a comment during the submission.
 + Thursday:
 + Friday:
 + Saturday:
-+ Sunday: 
++ Sunday:
