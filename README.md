@@ -19,7 +19,7 @@ Thursday April 20th by Midnight
 >Please have your ajax_status.php page in place and at least returning a
 properly formatted 'closed' message.
 
-- [ ] ajax_status.php is closed
+- [x] ajax_status.php is closed
 
 Thursday April 27th by Midnight
 ---
