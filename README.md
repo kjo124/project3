@@ -44,7 +44,7 @@ URL to your website as a comment during the submission.
 - [ ] ajax_ingredient.php
 - [ ] ajax_ingrimage.php
 - [ ] ajax_listing.php
-- [ ] ajax_status.php
+- [x] ajax_status.php
 ### Pages: ###
 - [ ] ingredients_display.php
 - [ ] index.php
