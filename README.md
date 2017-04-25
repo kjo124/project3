@@ -89,10 +89,10 @@ URL to your website as a comment during the submission.
 + Sunday: Not on campus but available
 
 **Derek:**
-+ Monday:
-+ Tuesday:
-+ Wednesday:
-+ Thursday:
-+ Friday:
-+ Saturday:
++ Monday: 10:00 - 12:00, 2:00 - 5:00
++ Tuesday: 9:00 - 12:00, 1:00 - 3:00
++ Wednesday: 10:00 - 12:00, 2:00 - 5:00
++ Thursday: 9:00 - 3:00
++ Friday: 10:00 - 12:00, 2:00 - 5:00
++ Saturday: 
 + Sunday:
