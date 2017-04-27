@@ -43,7 +43,7 @@ URL to your website as a comment during the submission.
 ### Ajax: ###
 - [ ] ajax_ingredient.php
 - [ ] ajax_ingrimage.php
-- [ ] ajax_listing.php
+- [x] ajax_listing.php
 - [x] ajax_status.php
 ### Pages: ###
 - [ ] ingredients_display.php
@@ -94,5 +94,5 @@ URL to your website as a comment during the submission.
 + Wednesday: 10:00 - 12:00, 2:00 - 5:00
 + Thursday: 9:00 - 3:00
 + Friday: 10:00 - 12:00, 2:00 - 5:00
-+ Saturday: 
++ Saturday:
 + Sunday:
