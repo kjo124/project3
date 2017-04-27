@@ -1,5 +1,8 @@
-<!-- DO NOT MOVE FROM ROOT -->
-<!-- AJAX Listing Page
+<?php
+/*
+DO NOT MOVE FROM ROOT
+
+===== AJAX Listing Page =====
 
 Your site must provide a page, ajax_listing.php , through which any other site
 in the federation may obtain a listing of available ingredients. The results
@@ -15,3 +18,53 @@ is whatevery you like so long as the text does not exceed 50 characters. The
 unit field clarifies for customers what the our buying when they select a
 quantity to purchase. Finally, cost is a dollar amount per unit specified in
 the format shown: i.e. dollars then a colon then cents.  -->
+*/
+
+
+// application/json because: http://stackoverflow.com/a/2590013
+header ( 'Content-Type: application/json' );
+
+// what this does (cross-scripting): http://stackoverflow.com/a/10636765
+header ( "Access-Control-Allow-Origin: *" );
+
+// status is either closed or open indicating whether the site is ready or not
+// headings: name, short (short bit),unit (bunch, kg), cost
+$heading1 = "name";
+$heading2 = "short";
+$heading3 = "unit";
+$heading4 = "cost";
+
+$unit = "kg";
+
+$ing1 = array (
+	$heading1 => "Cabbage",
+  $heading2 => "Best when fermented",
+  $heading3 => $unit,
+  $heading4 => "9.97",
+);
+
+$ing2 = array (
+	$heading1 => "Eggplant",
+  $heading2 => "Good in ratatouille",
+  $heading3 => $unit,
+  $heading4 => "2.18",
+);
+
+$ing3 = array (
+	$heading1 => "Leek",
+  $heading2 => "Not as good as onions",
+  $heading3 => $unit,
+  $heading4 => "6.99",
+);
+
+$listings = array ();
+
+$listings = array (
+	$ing1,
+  $ing2,
+  $ing3,
+);
+
+// Your ajax_status.php page must return a JSON object
+echo json_encode ( $listings );
+?>
