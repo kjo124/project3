@@ -1,4 +1,13 @@
 <?php
+require_once "inc/page_setup.php";
+// this is the ingredient from the URL
+$id = $_GET['ing'];
+
+$db = new Database();
+$ingredient = $db->findIngredient($id);
+// $requestedIngredient is now the name of the ingredient requested
+$requestedIngredient = $ingredient->name;
+
 /*
 DO NOT MOVE FROM ROOT
 
@@ -59,18 +68,7 @@ $ing1 = array (
   $heading3 => $unit,
   $heading4 => "9.97",
   $heading5 => "2 days",
-  $heading6 => "Cabbage or headed cabbage (comprising several cultivars of
-  Brassica oleracea) is a leafy green or purple biennial plant, grown as an
-  annual vegetable crop for its dense-leaved heads. It is descended from the
-  wild cabbage, B. oleracea var. oleracea, and is closely related to broccoli
-  and cauliflower (var. botrytis), Brussels sprouts (var. gemmifera) and savoy
-  cabbage (var. sabauda) which are sometimes called cole crops. Cabbage heads
-  generally range from 0.5 to 4 kilograms (1 to 9 lb), and can be green, purple
-  and white. Smooth-leafed firm-headed green cabbages are the most common, with
-  smooth-leafed red and crinkle-leafed savoy cabbages of both colors seen more
-  rarely. It is a multi-layered vegetable. Under conditions of long sunlit days
-  such as are found at high northern latitudes in summer, cabbages can grow
-  much larger.",
+  $heading6 => "Cabbage or headed cabbage (comprising several cultivars of Brassica oleracea) is a leafy green or purple biennial plant, grown as an annual vegetable crop for its dense-leaved heads. It is descended from the wild cabbage, B. oleracea var. oleracea, and is closely related to broccoli and cauliflower (var. botrytis), Brussels sprouts (var. gemmifera) and savoy cabbage (var. sabauda) which are sometimes called cole crops. Cabbage heads generally range from 0.5 to 4 kilograms (1 to 9 lb), and can be green, purple and white. Smooth-leafed firm-headed green cabbages are the most common, with smooth-leafed red and crinkle-leafed savoy cabbages of both colors seen more rarely. It is a multi-layered vegetable. Under conditions of long sunlit days such as are found at high northern latitudes in summer, cabbages can grow much larger.",
 );
 
 $ing2 = array (
@@ -79,10 +77,7 @@ $ing2 = array (
   $heading3 => $unit,
   $heading4 => "2.18",
   $heading5 => "2 days",
-  $heading6 => "Eggplant (Solanum melongena), or aubergine, is a species of
-  nightshade grown for its edible fruit. Eggplant is the common name in North
-  America and Australia, but British English uses the French word aubergine. It
-  is known in South Asia, Southeast Asia, and South Africa as brinjal.",
+  $heading6 => "Eggplant (Solanum melongena), or aubergine, is a species of nightshade grown for its edible fruit. Eggplant is the common name in North America and Australia, but British English uses the French word aubergine. It is known in South Asia, Southeast Asia, and South Africa as brinjal.",
 );
 
 $ing3 = array (
@@ -91,24 +86,34 @@ $ing3 = array (
   $heading3 => $unit,
   $heading4 => "6.99",
   $heading5 => "2 days",
-  $heading6 => "The leek is a vegetable, a cultivar of Allium ampeloprasum, the
-  broadleaf wild leek. The edible part of the plant is a bundle of leaf sheaths
-  that is sometimes erroneously called a stem or stalk. Historically, many
-  scientific names were used for leeks, but they are now all treated as
-  cultivars of A. ampeloprasum. The name leek developed from the Anglo-Saxon
-  word leac. Two closely related vegetables, elephant garlic and kurrat, are
-  also cultivars of A. ampeloprasum, although different in their uses as food.
-  The onion and garlic are also related, being other species of the genus
-  Allium.",
+  $heading6 => "The leek is a vegetable, a cultivar of Allium ampeloprasum, the broadleaf wild leek. The edible part of the plant is a bundle of leaf sheaths that is sometimes erroneously called a stem or stalk. Historically, many scientific names were used for leeks, but they are now all treated as cultivars of A. ampeloprasum. The name leek developed from the Anglo-Saxon word leac. Two closely related vegetables, elephant garlic and kurrat, are also cultivars of A. ampeloprasum, although different in their uses as food. The onion and garlic are also related, being other species of the genus Allium.",
 );
 
-// use post? to grab ingredient name, switch statement to assign it to
-// $ingredient
-
-// if "cabbage":
-// $ingredient = array (
-// 	$ing1,
-// );
+// grab ingredient name, switch statement to assign it to $ingredient
+// it is structured as '"ingredient"' because $requestedIngredient litterally
+// is "Cabbage" not Cabbage
+switch ($requestedIngredient) {
+  case '"Cabbage"':
+    $ingredient = array (
+  	   $ing1,
+    );
+    break;
+  case '"Eggplant"':
+    $ingredient = array (
+     $ing2,
+    );
+    break;
+  case '"Leek"':
+    $ingredient = array (
+     $ing3,
+    );
+    break;
+  default:
+    $ingredient = array (
+     $requestedIngredient => "is not an ingredient for this site...hopefully",
+    );
+    break;
+}
 
 // Your ajax_status.php page must return a JSON object
 echo json_encode ( $ingredient );
