@@ -41,7 +41,7 @@ URL to your website as a comment during the submission.
 - [ ] finished
 
 ### Ajax: ###
-- [ ] ajax_ingredient.php
+- [x] ajax_ingredient.php
 - [ ] ajax_ingrimage.php
 - [x] ajax_listing.php
 - [x] ajax_status.php
