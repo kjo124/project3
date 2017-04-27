@@ -20,14 +20,12 @@ quantity to purchase. Finally, cost is a dollar amount per unit specified in
 the format shown: i.e. dollars then a colon then cents.  -->
 */
 
-
 // application/json because: http://stackoverflow.com/a/2590013
 header ( 'Content-Type: application/json' );
 
 // what this does (cross-scripting): http://stackoverflow.com/a/10636765
 header ( "Access-Control-Allow-Origin: *" );
 
-// status is either closed or open indicating whether the site is ready or not
 // headings: name, short (short bit),unit (bunch, kg), cost
 $heading1 = "name";
 $heading2 = "short";
@@ -36,6 +34,7 @@ $heading4 = "cost";
 
 $unit = "kg";
 
+// ex. {"name":"Carrot","short":"What's Up Doc","unit":"bunch","cost":"1.99"}
 $ing1 = array (
 	$heading1 => "Cabbage",
   $heading2 => "Best when fermented",
@@ -57,14 +56,13 @@ $ing3 = array (
   $heading4 => "6.99",
 );
 
-$listings = array ();
-
+// all the ingredients inserted into $listings
 $listings = array (
 	$ing1,
   $ing2,
   $ing3,
 );
 
-// Your ajax_status.php page must return a JSON object
+// $listings returned using JSON
 echo json_encode ( $listings );
 ?>
