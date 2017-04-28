@@ -24,7 +24,7 @@ header ( 'Content-Type: application/json' );
 header ( "Access-Control-Allow-Origin: *" );
 
 // status is either closed or open indicating whether the site is ready or not
-$currentStatus = "closed";
+$currentStatus = "open";
 
 $status = array ();
 
