@@ -115,6 +115,5 @@ switch ($requestedIngredient) {
     break;
 }
 
-// Your ajax_status.php page must return a JSON object
 echo json_encode ( $ingredient );
 ?>
