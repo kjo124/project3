@@ -27,7 +27,7 @@ Thursday April 27th by Midnight
 >Dry run testing of Project 3 Team AJAX API. The GTA will test and record which
 teams have all four AJAX files in place and responding to queries correctly.
 
-- [ ] dry run of all AJAX files
+- [x] dry run of all AJAX files
 
 
 Friday May 5th Project 3 is Due
@@ -42,7 +42,7 @@ URL to your website as a comment during the submission.
 
 ### Ajax: ###
 - [x] ajax_ingredient.php
-- [ ] ajax_ingrimage.php
+- [x] ajax_ingrimage.php
 - [x] ajax_listing.php
 - [x] ajax_status.php
 ### Pages: ###
