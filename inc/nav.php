@@ -22,6 +22,7 @@
      			<li><a href="AboutUs.php">About Us</a></li>
           <li><a href="createData.php">Drop & Create Databases</a></li>
           <li><a href="ingredients_ajax_pagination.php">Ingredients Page</a></li>
+          <li><a href="fedr_status.php">Federation Status</a></li>
       		</ul>
       		 <?php
                 if (isset($_SESSION['userType'])){
