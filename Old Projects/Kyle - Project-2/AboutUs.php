@@ -1,6 +1,5 @@
 <?php
-include 'inc/support.php';
-include 'inc/control.php';
+require_once "inc/page_setup.php";
 include 'inc/header.php';
 ?>
 
