@@ -11,9 +11,11 @@ include 'inc/header.php';
 <div class="container-fluid">
 	<div class="row visible-on">
 		<div class="col-md-6">
-			<h1>Bobby Elliott</h1>
+			<h1>Derek Law</h1>
 			<p>
-			My name is Bobby Elliott I was born in 1996. I am from Steamboat Springs, CO. I graduated from Steamboat Springs High School in 2014. Growing up in Steamboat I came to love skiing and recently switched from alpine to telemark skiing. I also played hockey and lacrosse throughout high school. After I graduated I came down to Fort Collins to attend Colorado State University. Here, I am double majoring in Applied Computing Technologies and Finance.
+			My name is Derek Law I was born in 1992. I am from Colorado Springs, CO. I graduated from Air Academy High School in 2011.
+			I also played football, wrestling and lacrosse throughout high school. After I graduated I came to Fort Collins to attend
+			Colorado State University. Here, I am majoring in Applied Computing Technology and minoring in Business Administration.
 			</p>
 		</div>
 		<div class="col-md-6">
