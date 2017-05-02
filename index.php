@@ -1,7 +1,6 @@
 <?php
-include 'inc/support.php';
-include 'inc/control.php';
-include 'inc/header.php';
+require_once "inc/page_setup.php";
+require_once 'inc/header.php';
 ?>
 <!-- A Home page - Welcome message, info and links about other sections etc. -->
 
@@ -9,11 +8,10 @@ include 'inc/header.php';
 <div class="container-fluid">
 	<div class="row visible-on">
 		<div class="col-md-3">
-			<?php include 'inc/authentication.php';?>
+			<?php require_once 'inc/authentication.php';?>
 		</div>
 		<div class="col-md-6">
-			<p>Welcome to Kyle Odin & Bobby Elliott Project #2. We have added ability
-				to add ingredients, a shopping cart, and customer/admin accounts. Feel
+			<p>Welcome to Kyle Odin & Derek Law Project #3. Feel
 				free to login and comment on our ingredients.</p>
 		</div>
 		<div class="col-md-3">
@@ -24,4 +22,4 @@ include 'inc/header.php';
 	</div>
 </div>
 
-<?php include './inc/footer.php';?>
+<?php require_once './inc/footer.php';?>

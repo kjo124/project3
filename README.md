@@ -47,9 +47,9 @@ URL to your website as a comment during the submission.
 - [x] ajax_status.php
 ### Pages: ###
 - [ ] ingredients_display.php
-- [ ] index.php
-- [ ] about_us.php
-- [ ] shopping_cart.php
+- [x] index.php
+- [x] about_us.php
+- [x] shopping_cart.php
 - [ ] forgot_my_password.php
 - [ ] login.php
 - [ ] logout.php
@@ -58,15 +58,15 @@ URL to your website as a comment during the submission.
 - [ ] fedr_status.php
 - [ ] ingredients_ajax_pagination.php
 ### Includes: ###
-- [ ] authentication.php
-- [ ] commenting.php
-- [ ] page_setup.php
-- [ ] control.php
-- [ ] footer.php
-- [ ] header.php
-- [ ] nav.php
+- [x] authentication.php
+- [x] commenting.php
+- [x] page_setup.php
+- [x] control.php
+- [x] footer.php
+- [x] header.php
+- [x] nav.php
 - [ ] support.php
-- [ ] style.css
+- [x] style.css
 ### Classes: ###
 - [ ] database.php
 - [ ] comment.php
