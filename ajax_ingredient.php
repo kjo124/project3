@@ -52,62 +52,65 @@ header ( "Access-Control-Allow-Origin: *" );
 
 // headings: name, short (short description),unit (bunch, kg), cost, time (how
 // long it takes to ship), desc (long description)
-$heading1 = "name";
-$heading2 = "short";
-$heading3 = "unit";
-$heading4 = "cost";
-$heading5 = "time";
-$heading6 = "desc";
+$heading1 = 'name';
+$heading2 = 'short';
+$heading3 = 'unit';
+$heading4 = 'cost';
+$heading5 = 'time';
+$heading6 = 'desc';
 
-$unit = "kg";
+$unit = 'kg';
 
 // ingredients
 $ing1 = array (
-	$heading1 => "Cabbage",
-  $heading2 => "Best when fermented",
+	$heading1 => 'Cabbage',
+  $heading2 => 'Best when fermented',
   $heading3 => $unit,
-  $heading4 => "9.97",
-  $heading5 => "2 days",
-  $heading6 => "Cabbage or headed cabbage (comprising several cultivars of Brassica oleracea) is a leafy green or purple biennial plant, grown as an annual vegetable crop for its dense-leaved heads. It is descended from the wild cabbage, B. oleracea var. oleracea, and is closely related to broccoli and cauliflower (var. botrytis), Brussels sprouts (var. gemmifera) and savoy cabbage (var. sabauda) which are sometimes called cole crops. Cabbage heads generally range from 0.5 to 4 kilograms (1 to 9 lb), and can be green, purple and white. Smooth-leafed firm-headed green cabbages are the most common, with smooth-leafed red and crinkle-leafed savoy cabbages of both colors seen more rarely. It is a multi-layered vegetable. Under conditions of long sunlit days such as are found at high northern latitudes in summer, cabbages can grow much larger.",
+  $heading4 => '9.97',
+  $heading5 => '2 days',
+  $heading6 => 'Cabbage or headed cabbage (comprising several cultivars of Brassica oleracea) is a leafy green or purple biennial plant, grown as an annual vegetable crop for its dense-leaved heads. It is descended from the wild cabbage, B. oleracea var. oleracea, and is closely related to broccoli and cauliflower (var. botrytis), Brussels sprouts (var. gemmifera) and savoy cabbage (var. sabauda) which are sometimes called cole crops. Cabbage heads generally range from 0.5 to 4 kilograms (1 to 9 lb), and can be green, purple and white. Smooth-leafed firm-headed green cabbages are the most common, with smooth-leafed red and crinkle-leafed savoy cabbages of both colors seen more rarely. It is a multi-layered vegetable. Under conditions of long sunlit days such as are found at high northern latitudes in summer, cabbages can grow much larger.',
 );
 
 $ing2 = array (
-	$heading1 => "Eggplant",
-  $heading2 => "Good in ratatouille",
+	$heading1 => 'Eggplant',
+  $heading2 => 'Good in ratatouille',
   $heading3 => $unit,
-  $heading4 => "2.18",
-  $heading5 => "2 days",
-  $heading6 => "Eggplant (Solanum melongena), or aubergine, is a species of nightshade grown for its edible fruit. Eggplant is the common name in North America and Australia, but British English uses the French word aubergine. It is known in South Asia, Southeast Asia, and South Africa as brinjal.",
+  $heading4 => '2.18',
+  $heading5 => '2 days',
+  $heading6 => 'Eggplant (Solanum melongena), or aubergine, is a species of nightshade grown for its edible fruit. Eggplant is the common name in North America and Australia, but British English uses the French word aubergine. It is known in South Asia, Southeast Asia, and South Africa as brinjal.',
 );
 
 $ing3 = array (
-	$heading1 => "Leek",
-  $heading2 => "Not as good as onions",
+	$heading1 => 'Leek',
+  $heading2 => 'Not as good as onions',
   $heading3 => $unit,
-  $heading4 => "6.99",
-  $heading5 => "2 days",
-  $heading6 => "The leek is a vegetable, a cultivar of Allium ampeloprasum, the broadleaf wild leek. The edible part of the plant is a bundle of leaf sheaths that is sometimes erroneously called a stem or stalk. Historically, many scientific names were used for leeks, but they are now all treated as cultivars of A. ampeloprasum. The name leek developed from the Anglo-Saxon word leac. Two closely related vegetables, elephant garlic and kurrat, are also cultivars of A. ampeloprasum, although different in their uses as food. The onion and garlic are also related, being other species of the genus Allium.",
+  $heading4 => '6.99',
+  $heading5 => '2 days',
+  $heading6 => 'The leek is a vegetable, a cultivar of Allium ampeloprasum, the broadleaf wild leek. The edible part of the plant is a bundle of leaf sheaths that is sometimes erroneously called a stem or stalk. Historically, many scientific names were used for leeks, but they are now all treated as cultivars of A. ampeloprasum. The name leek developed from the Anglo-Saxon word leac. Two closely related vegetables, elephant garlic and kurrat, are also cultivars of A. ampeloprasum, although different in their uses as food. The onion and garlic are also related, being other species of the genus Allium.',
 );
 
 // grab ingredient name, switch statement to assign it to $ingredient
 // it is structured as '"ingredient"' because $requestedIngredient litterally
 // is "Cabbage" not Cabbage
-switch ($requestedIngredient) {
+switch ($id) {
   case '"Cabbage"':
-    $ingredient = array (
-  	   $ing1,
-    );
+    $ingredient = $ing1;
     break;
+	case 'Cabbage':
+	   $ingredient = $ing1;
+	   break;
   case '"Eggplant"':
-    $ingredient = array (
-     $ing2,
-    );
+    $ingredient = $ing2;
     break;
+	case 'Eggplant':
+	   $ingredient = $ing2;
+	   break;
   case '"Leek"':
-    $ingredient = array (
-     $ing3,
-    );
+    $ingredient = $ing3;
     break;
+	case 'Leek':
+	  $ingredient = $ing3;
+	  break;
   default:
     $ingredient = array (
      $requestedIngredient => "is not an ingredient for this site...hopefully",
