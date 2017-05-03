@@ -34,11 +34,23 @@ switch ($requestedIngredient) {
     $im = file_get_contents("uploads/Cabbage.jpg");
     $imdata = base64_encode($im);
     break;
+  case 'Cabbage':
+    $im = file_get_contents("uploads/Cabbage.jpg");
+    $imdata = base64_encode($im);
+    break;
   case '"Eggplant"':
     $im = file_get_contents("uploads/Eggplant.jpg");
     $imdata = base64_encode($im);
     break;
+  case 'Eggplant':
+    $im = file_get_contents("uploads/Eggplant.jpg");
+    $imdata = base64_encode($im);
+    break;
   case '"Leek"':
+    $im = file_get_contents("uploads/Leek.jpg");
+    $imdata = base64_encode($im);
+    break;
+  case 'Leek':
     $im = file_get_contents("uploads/Leek.jpg");
     $imdata = base64_encode($im);
     break;
@@ -54,7 +66,7 @@ echo json_encode ( $imdata );
 /*
  * Issues:
  * Currently the Ingredient object is not working correctly, a
- * $ingredient->image; call should bring back "Cabbage.jpg" but instead it is 
+ * $ingredient->image; call should bring back "Cabbage.jpg" but instead it is
  * just blank, this should be easy to fix but I just hardcodes these because
  * this is how the site is going to work anyways.
  */

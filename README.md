@@ -50,12 +50,12 @@ URL to your website as a comment during the submission.
 - [x] index.php
 - [x] about_us.php
 - [x] shopping_cart.php
-- [ ] forgot_my_password.php
-- [ ] login.php
-- [ ] logout.php
-- [ ] reset.php
-- [ ] add_ingredient.php
-- [ ] fedr_status.php
+- [x] forgot_my_password.php
+- [x] login.php
+- [x] logout.php
+- [x] reset.php
+- [x] add_ingredient.php
+- [x] fedr_status.php
 - [ ] ingredients_ajax_pagination.php
 ### Includes: ###
 - [x] authentication.php

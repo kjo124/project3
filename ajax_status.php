@@ -24,15 +24,10 @@ header ( 'Content-Type: application/json' );
 header ( "Access-Control-Allow-Origin: *" );
 
 // status is either closed or open indicating whether the site is ready or not
-$currentStatus = "open";
+$currentStatus = 'open';
 
-$status = array ();
+$status = array ('status' => $currentStatus);
 
-$status [0] = array (
-  // it should return: {"status":"open"} or {"status":"closed"}
-	'status' => $currentStatus,
-);
-
-// Your ajax_status.php page must return a JSON object
 echo json_encode ( $status );
+
 ?>
