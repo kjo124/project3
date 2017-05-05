@@ -56,7 +56,7 @@ URL to your website as a comment during the submission.
 - [x] reset.php
 - [x] add_ingredient.php
 - [x] fedr_status.php
-- [ ] ingredients_ajax_pagination.php
+- [x] ingredients_ajax_pagination.php (it is actually just a table)
 ### Includes: ###
 - [x] authentication.php
 - [x] commenting.php
