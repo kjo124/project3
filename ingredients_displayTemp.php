@@ -23,13 +23,8 @@ presentation on one page is fine. -->
 include 'inc/support.php';
 include 'inc/control.php';
 include 'inc/header.php';
-$id = $_GET['id'];
-$db = new Database();
-$ingredient = $db->findIngredient($id);
-
-//stores url variables site and ing
-$site = getUrlVariable("site");
-$ing = getUrlVariable("ing");
+$site = $_GET['site'];
+$ing = $_GET['ing'];
 ?>
 
 <div class="container-fluid">
@@ -67,13 +62,13 @@ $ing = getUrlVariable("ing");
 		</div>
 		<div class="col-md-6">
 			<!-- Display desription here -->
-                       <h3 style="text-align:center;"> $ing </h3> 
+                       <h3 style="text-align:center;"><?php echo $ing?></h3> 
                         &nbsp; &nbsp;
                         <div class = "message">
-                        <p><blockquote> <script> shortName </script> </blockquote></p>
+                        <p><blockquote id="descrip"></blockquote></p>
                         <form action = "#" method = "post" style="width:200px;">
                             <div class="form-group">
-                                <label for='cst'>Price: <script> cost + " a " + unit </script></label><br>
+                                <label for='cst'>Price: </label><br>
                                 <input type="number" class="form-control" name="qty">
                             </div>
                             <button class="addToCart">Add to Cart</button>
@@ -82,7 +77,7 @@ $ing = getUrlVariable("ing");
 		</div>
 		<div class="col-md-3">
 			<!-- displays ingredient image -->
-			echo '<script> displayImg(); </script>'?>"
+			<image id="image"></image>
 
 			<!-- right -->
 		</div>
@@ -92,54 +87,50 @@ $ing = getUrlVariable("ing");
 <?php include 'inc/footer.php';?>
 
 <script>
+
 	jQuery(document).ready(function() {
 		jQuery.post("https://www.cs.colostate.edu/~ct310/yr2017sp/more_assignments/project03masterlist.php", {}, function(data, status) {
 
 			var masterListLen = data.length;
+                        var site = "<?php echo $site ?>";
+                        var ing = "<?php echo $ing ?>";
 
-			// for each entry in master list
+                        // for each entry in master list
 			for (i = masterListLen - 1; i >= 0; i--) {
-                            if (data[i].nameShort == $site) {
+                            if (data[i].nameShort == site) {
                                 
 				// siteImg is the masterlist ajax_ingrimage.php
-				var siteImg = data[i].baseURL + "/ajax_ingrimage.php";
+				var siteImg = data[i].baseURL + "ajax_ingrimage.php";
 				// siteDescrip to grab description
-				var siteDescrip = data[i].baseURL + "/ajax_ingredient.php";
+            
 				//also need cost/price
 				var baseURL = data[i].baseURL;
                                 var shortName = data[i].nameShort;
-                                var cost = lst[i].cost;
-                                var unit = lst[j].unit;
+                                var siteDescrip = data[i].baseURL + "/ajax_ingredient.php" + "?ing=" + "\"" + shortName + "\"";
+                                //var cost = lst[i].cost;
+                                //var unit = lst[j].unit;
                             }
+                            
+                            //document.getElementById("descrip").src = siteDesrip;
+                            displayImg(siteImg, ing);
 
 			}
 		})
 	});
 	
 	//displays image
-	function displayImg() {
+	function displayImg(siteImg, ing) {
 		$.ajax({
 			// url needs to access 
-		 	url: siteImg + $ing,
+		 	url: siteImg + "?ing=" + "\"" + ing  + "\"" ,
 			data: "json",
 			success: function(result) {
-			     document.getElementById("randomImg").src = "data:image/png; base64, " + result;
+			     document.getElementById("image").src = "data:image/png; base64, " + result;
 			},
 			error: function(xhr, status) {  
 			     $("randomImg").hide();
 			     alert('Unknown error ' + status); 
 			}
 		})
-	}
-	
-	//grabs site and ing variables from url
-	function getUrlVariable(variable) {
-	       var query = window.location.search.substring(1);
-	       var vars = query.split("&");
-	       for (var i=0;i<vars.length;i++) {
-	               var pair = vars[i].split("=");
-	               if(pair[0] == variable){return pair[1];}
-	       }
-	       return(false);
 	}
 </script>
