@@ -66,13 +66,18 @@ $ing = getUrlVariable("ing");
 			<!-- left -->
 		</div>
 		<div class="col-md-6">
-			<!------------- Display name, description, cost here -------------------->
-                    <!-- <div class="Title" align="center">
-                          <h1><?php echo $ingredient->name ?> </h1>
-                    </div>
-                    <div class="maincontent" align="center">
-                          <?php echo $ingredient->description ?>
-                    </div> -->
+			<!-- Display desription here -->
+                       <h3 style="text-align:center;"> $ing </h3> 
+                        &nbsp; &nbsp;
+                        <div class = "message">
+                        <p><blockquote> <script> shortName </script> </blockquote></p>
+                        <form action = "#" method = "post" style="width:200px;">
+                            <div class="form-group">
+                                <label for='cst'>Price: <script> cost + " a " + unit </script></label><br>
+                                <input type="number" class="form-control" name="qty">
+                            </div>
+                            <button class="addToCart">Add to Cart</button>
+                        </form>
 			<!-- middle -->
 		</div>
 		<div class="col-md-3">
@@ -94,11 +99,18 @@ $ing = getUrlVariable("ing");
 
 			// for each entry in master list
 			for (i = masterListLen - 1; i >= 0; i--) {
+                            if (data[i].nameShort == $site) {
+                                
 				// siteImg is the masterlist ajax_ingrimage.php
 				var siteImg = data[i].baseURL + "/ajax_ingrimage.php";
 				// siteDescrip to grab description
 				var siteDescrip = data[i].baseURL + "/ajax_ingredient.php";
 				//also need cost/price
+				var baseURL = data[i].baseURL;
+                                var shortName = data[i].nameShort;
+                                var cost = lst[i].cost;
+                                var unit = lst[j].unit;
+                            }
 
 			}
 		})
@@ -108,7 +120,7 @@ $ing = getUrlVariable("ing");
 	function displayImg() {
 		$.ajax({
 			// url needs to access 
-		 	url: "https://www.cs.colostate.edu/~ct310/yr2017sp/more_assignments/project03masterlist.php",
+		 	url: siteImg + $ing,
 			data: "json",
 			success: function(result) {
 			     document.getElementById("randomImg").src = "data:image/png; base64, " + result;
