@@ -19,8 +19,8 @@
         echo "<br>";
         echo "Comment added.";
         echo "<br>";
-        $dbc->addComment($id, $newstr , $_SESSION["username"], date('l jS \of F Y h:i:s A'));
-        $commentArr = $dbc->getComments($id);
+        $dbc->addComment($ing, $newstr , $_SESSION["username"], date('l jS \of F Y h:i:s A'));
+        $commentArr = $dbc->getComments($ing);
 
         ?>
 
@@ -38,7 +38,7 @@
         <?php
 
       } else {
-        $commentArr = $dbc->getComments($id);
+        $commentArr = $dbc->getComments($ing);
 
         ?>
 

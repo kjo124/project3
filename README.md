@@ -38,7 +38,7 @@ be through live sites, although project teams will be asked to submit tar files
 of their site code as well. Please host it on your CS account and provide the
 URL to your website as a comment during the submission.
 
-- [ ] finished
+- [x] finished
 
 ### Ajax: ###
 - [x] ajax_ingredient.php
@@ -46,7 +46,7 @@ URL to your website as a comment during the submission.
 - [x] ajax_listing.php
 - [x] ajax_status.php
 ### Pages: ###
-- [ ] ingredients_display.php
+- [x] ingredients_display.php
 - [x] index.php
 - [x] about_us.php
 - [x] shopping_cart.php
@@ -65,13 +65,13 @@ URL to your website as a comment during the submission.
 - [x] footer.php
 - [x] header.php
 - [x] nav.php
-- [ ] support.php
+- [x] support.php
 - [x] style.css
 ### Classes: ###
-- [ ] database.php
-- [ ] comment.php
-- [ ] users.php
-- [ ] ingredient.php
+- [x] database.php
+- [x] comment.php
+- [x] users.php
+- [x] ingredient.php
 
 * * *
 
